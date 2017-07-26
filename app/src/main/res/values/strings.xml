@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">医考宝</string>
+
+    <!--百分比-->
+    <string name="app_dp_360">100%w</string>
+    <string name="app_dp_336">93.33%w</string>
+    <string name="app_dp_320">88.88%w</string>
+    <string name="app_dp_300">83.33%w</string>
+    <string name="app_dp_250">69.44%w</string>
+    <string name="app_dp_225">62.5%w</string>
+    <string name="app_dp_223">61.94%w</string>
+    <string name="app_dp_222">61.66%w</string>
+    <string name="app_dp_209">58.05%w</string>
+    <string name="app_dp_180">50%w</string>
+    <string name="app_dp_173">48.05%w</string>
+    <string name="app_dp_170">47.22%w</string>
+    <string name="app_dp_150">41.66%w</string>
+    <string name="app_dp_138">38.33%w</string>
+    <string name="app_dp_135">37.5%w</string>
+    <string name="app_dp_133">36.94%w</string>
+    <string name="app_dp_123">34.16%w</string>
+    <string name="app_dp_120">33.3%w</string>
+    <string name="app_dp_110">30.5%w</string>
+    <string name="app_dp_100">27.7%w</string>
+    <string name="app_dp_95">26.38%w</string>
+    <string name="app_dp_94">26.11%w</string>
+    <string name="app_dp_87">24.16%w</string>
+    <string name="app_dp_86">23.8%w</string>
+    <string name="app_dp_84">23.3%w</string>
+    <string name="app_dp_82">22.77%w</string>
+    <string name="app_dp_77">21.38%w</string>
+    <string name="app_dp_74">20.55%w</string>
+    <string name="app_dp_72">20.0%w</string>
+    <string name="app_dp_70">19.44%w</string>
+    <string name="app_dp_67">18.61%w</string>
+    <string name="app_dp_69">19.16%w</string>
+    <string name="app_dp_65">18.0%w</string>
+    <string name="app_dp_64">17.7%w</string>
+    <string name="app_dp_62">17.2%w</string>
+    <string name="app_dp_60">16.6%w</string>
+    <string name="app_dp_57">15.8%w</string>
+    <string name="app_dp_56">15.55%w</string>
+    <string name="app_dp_55">15.27%w</string>
+    <string name="app_dp_54">15%w</string>
+    <string name="app_dp_52">14.4%w</string>
+    <string name="app_dp_51">14.1%w</string>
+    <string name="app_dp_50">13.88%w</string>
+    <string name="app_dp_48">13.33%w</string>
+    <string name="app_dp_47">13.3%w</string>
+    <string name="app_dp_45">12.5%w</string>
+    <string name="app_dp_44">12.2%w</string>
+    <string name="app_dp_43">11.94%w</string>
+    <string name="app_dp_41">11.3%w</string>
+    <string name="app_dp_40">11.11%w</string>
+    <string name="app_dp_39">10.83%w</string>
+    <string name="app_dp_38">10.55%w</string>
+    <string name="app_dp_37">10.27%w</string>
+    <string name="app_dp_36">10%w</string>
+    <string name="app_dp_35">9.7%w</string>
+    <string name="app_dp_34">9.4%w</string>
+    <string name="app_dp_32">8.88%w</string>
+    <string name="app_dp_31">8.61%w</string>
+    <string name="app_dp_30">8.33%w</string>
+    <string name="app_dp_29">8.05%w</string>
+    <string name="app_dp_28">7.77%w</string>
+    <string name="app_dp_27">7.5%w</string>
+    <string name="app_dp_26">7.22%w</string>
+    <string name="app_dp_25">6.94%w</string>
+    <string name="app_dp_24">6.6%w</string>
+    <string name="app_dp_23">6.38%w</string>
+    <string name="app_dp_21">5.83%w</string>
+    <string name="app_dp_20">5.5%w</string>
+    <string name="app_dp_19">5.27%w</string>
+    <string name="app_dp_18">5%w</string>
+    <string name="app_dp_17">4.72%w</string>
+    <string name="app_dp_16">4.4%w</string>
+    <string name="app_dp_15">4.1%w</string>
+    <string name="app_dp_14">3.8%w</string>
+    <string name="app_dp_13">3.6%w</string>
+    <string name="app_dp_12">3.3%w</string>
+    <string name="app_dp_11">3%w</string>
+    <string name="app_dp_10">2.77%w</string>
+    <string name="app_dp_9">2.5%w</string>
+    <string name="app_dp_8">2.22%w</string>
+    <string name="app_dp_7">1.94%w</string>
+    <string name="app_dp_5">1.38%w</string>
+    <string name="app_dp_4">1.11%w</string>
+    <string name="app_dp_1">0.27%w</string>
+    <string name="app_dp_0">0%w</string>
+
+
+    <array name="score_item">
+        <item>差1分</item>
+        <item>待加强2分</item>
+        <item>普通3分</item>
+        <item>良好4分</item>
+        <item>优秀5分</item>
+    </array>
+</resources>

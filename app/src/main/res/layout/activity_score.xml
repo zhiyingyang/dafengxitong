@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yikaobao.view.percentsuppor.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context="com.yikaobao.activity.ScoreActivity">
+
+
+    <com.yikaobao.view.TitleView
+        android:id="@+id/exam_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="考生姓名" />
+
+    <!--  <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:ellipsize="end"
+          android:lines="1"
+          android:text="评分项目：(根据考生完成情况,每一步皆须勾选评分)"
+          android:textColor="@color/colorBlack"
+          app:layout_paddingPercent="@string/app_dp_12"
+          app:layout_textSizePercent="@string/app_dp_16" />
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/colorGrayLight"
+          app:layout_heightPercent="@string/app_dp_1" />
+
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:lines="1"
+          android:text="是否做到以下项目"
+          android:textColor="@color/colorBlack"
+          app:layout_paddingPercent="@string/app_dp_12"
+          app:layout_textSizePercent="@string/app_dp_16" />-->
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/candidateslist_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGrayLight"
+        android:layout_above="@+id/scoreing_bu"
+        android:layout_below="@+id/exam_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrayLight"
+        app:layout_heightPercent="@string/app_dp_1" />
+
+    <Button
+        android:id="@+id/scoreing_bu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/buttonshape"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/colorWhite"
+        app:layout_heightPercent="@string/app_dp_43"
+        app:layout_marginPercent="@string/app_dp_12"
+        app:layout_textSizePercent="@string/app_dp_18" />
+
+
+</com.yikaobao.view.percentsuppor.PercentRelativeLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.yikaobao.view.percentsuppor.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yikaobao.activity.CandidatesListActivity">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/candidateslist_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exam_title"
+        android:background="@color/colorGrayLight" />
+
+    <com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader
+        android:id="@+id/candidateslist_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exam_title">
+
+        <com.yikaobao.view.percentsuppor.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.yikaobao.view.percentsuppor.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                app:layout_paddingPercent="@string/app_dp_12">
+
+                <TextView
+                    android:id="@+id/exam_kaoanbianhao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="考案编号："
+                    android:textColor="@color/colorBlack"
+                    app:layout_textSizePercent="@string/app_dp_16" />
+
+                <TextView
+                    android:id="@+id/exam_kaoanmingchen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="考案名称："
+                    android:textColor="@color/colorBlack"
+                    app:layout_marginTopPercent="@string/app_dp_5"
+                    app:layout_textSizePercent="@string/app_dp_16" />
+
+                <TextView
+                    android:id="@+id/exam_kaohedanwei"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="考核单位："
+                    android:textColor="@color/colorBlack"
+                    app:layout_marginTopPercent="@string/app_dp_5"
+                    app:layout_textSizePercent="@string/app_dp_16" />
+
+                <TextView
+                    android:id="@+id/exam_ceyanriqi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="测验日期："
+                    android:textColor="@color/colorBlack"
+                    app:layout_marginTopPercent="@string/app_dp_5"
+                    app:layout_textSizePercent="@string/app_dp_16" />
+
+                <!--<TextView-->
+                <!--android:id="@+id/exam_ceyanhexing"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="测验核心："-->
+                <!--android:textColor="@color/colorBlack"-->
+                <!--app:layout_marginTopPercent="@string/app_dp_5" />-->
+
+                <TextView
+                    android:id="@+id/exam_ceyanhexing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="测验核心："
+                    android:textColor="@color/colorBlack"
+                    app:layout_marginTopPercent="@string/app_dp_5"
+                    app:layout_textSizePercent="@string/app_dp_16" />
+
+                <TextView
+                    android:id="@+id/exam_kaoguan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="考        官："
+                    android:textColor="@color/colorBlack"
+                    app:layout_marginTopPercent="@string/app_dp_5"
+                    app:layout_textSizePercent="@string/app_dp_16" />
+
+                <TextView
+                    android:id="@+id/exam_keshi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="人        数："
+                    android:textColor="@color/colorBlack"
+                    app:layout_marginTopPercent="@string/app_dp_5"
+                    app:layout_textSizePercent="@string/app_dp_16" />
+
+                <!--<TextView-->
+                <!--android:id="@+id/exam_kaozhan"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="考站"-->
+                <!--android:textColor="@color/colorBlack"-->
+                <!--app:layout_marginTopPercent="@string/app_dp_5" />-->
+
+            </com.yikaobao.view.percentsuppor.PercentLinearLayout>
+
+            <com.yikaobao.view.percentsuppor.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape"
+                android:orientation="horizontal"
+                app:layout_paddingTopPercent="@string/app_dp_10"
+                app:layout_paddingBottomPercent="@string/app_dp_10"
+                tools:context="com.yikaobao.activity.CandidatesListActivity">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="姓名"
+                    android:textColor="@color/colorWhite"
+                    app:layout_textSizePercent="@string/app_dp_18"
+                    app:layout_widthPercent="@string/app_dp_180" />
+
+                <TextView
+                    android:id="@+id/text_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="考生号"
+                    android:textColor="@color/colorWhite"
+                    app:layout_textSizePercent="@string/app_dp_18"
+                    app:layout_widthPercent="@string/app_dp_180" />
+
+            </com.yikaobao.view.percentsuppor.PercentLinearLayout>
+
+        </com.yikaobao.view.percentsuppor.PercentLinearLayout>
+    </com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader>
+
+    <com.yikaobao.view.TitleView
+        android:id="@+id/exam_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="考生" />
+</com.yikaobao.view.percentsuppor.PercentRelativeLayout>
+

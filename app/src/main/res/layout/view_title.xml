@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yikaobao.view.percentsuppor.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.yikaobao.view.percentsuppor.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_heightPercent="@string/app_dp_52">
+
+        <com.yikaobao.view.percentsuppor.PercentLinearLayout
+            android:id="@+id/view_title_back"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_back"
+                app:layout_heightPercent="50.7%"
+                app:layout_marginLeftPercent="34%h"
+                app:layout_widthPercent="50.7%h" />
+        </com.yikaobao.view.percentsuppor.PercentLinearLayout>
+
+        <TextView
+            android:id="@+id/view_title_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我"
+            android:textColor="@color/colorWhite"
+            app:layout_textSizePercent="5.2%w" />
+
+        <com.yikaobao.view.percentsuppor.PercentLinearLayout
+            android:id="@+id/view_title_right_LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="right|center_vertical"
+            app:layout_paddingLeftPercent="5%w"
+            app:layout_paddingRightPercent="5%w">
+
+            <TextView
+                android:id="@+id/view_title_right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:layout_heightPercent="50.7%"
+                app:layout_textSizePercent="5.2%w"
+                app:layout_widthPercent="50.7%h" />
+
+            <View
+                android:id="@+id/view_title_right_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:layout_heightPercent="50.7%"
+                app:layout_widthPercent="50.7%h" />
+        </com.yikaobao.view.percentsuppor.PercentLinearLayout>
+    </com.yikaobao.view.percentsuppor.PercentRelativeLayout>
+</com.yikaobao.view.percentsuppor.PercentRelativeLayout>

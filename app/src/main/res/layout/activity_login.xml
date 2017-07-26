@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yikaobao.view.percentsuppor.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape"
+    android:orientation="vertical">
+
+    <com.yikaobao.view.percentsuppor.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_heightPercent="@string/app_dp_209">
+
+
+        <ImageView
+            android:id="@+id/show_details_userimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/collect_teaching_img"
+            android:src="@drawable/icon_app"
+            android:visibility="gone"
+            app:layout_heightPercent="@string/app_dp_100"
+            app:layout_widthPercent="@string/app_dp_100" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OSCE"
+            android:textColor="@color/colorWhite"
+            app:layout_textSizePercent="@string/app_dp_82" />
+
+
+    </com.yikaobao.view.percentsuppor.PercentLinearLayout>
+
+    <com.yikaobao.view.percentsuppor.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="@string/app_dp_45"
+        app:layout_marginTopPercent="@string/app_dp_35"
+        app:layout_paddingLeftPercent="@string/app_dp_15"
+        app:layout_paddingRightPercent="@string/app_dp_15">
+
+        <EditText
+            android:id="@+id/login_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/login_phone_img"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入手机号"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:padding="0dp"
+            android:textCursorDrawable="@null"
+            app:layout_marginLeftPercent="@string/app_dp_14"
+            app:layout_textSizePercent="@string/app_dp_14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorBlack"
+            app:layout_heightPercent="0.27%w" />
+
+        <View
+            android:id="@+id/login_phone_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_user"
+            app:layout_heightPercent="@string/app_dp_25"
+            app:layout_widthPercent="@string/app_dp_25" />
+
+    </com.yikaobao.view.percentsuppor.PercentRelativeLayout>
+
+    <com.yikaobao.view.percentsuppor.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="@string/app_dp_45"
+        app:layout_paddingLeftPercent="@string/app_dp_15"
+        app:layout_paddingRightPercent="@string/app_dp_15">
+
+        <View
+            android:id="@+id/login_password_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_password"
+            app:layout_heightPercent="@string/app_dp_27"
+            app:layout_widthPercent="@string/app_dp_27" />
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/login_password_img"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:maxLength="11"
+            android:padding="0dp"
+            android:textCursorDrawable="@null"
+            app:layout_marginLeftPercent="@string/app_dp_14"
+            app:layout_textSizePercent="@string/app_dp_14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorBlack"
+            app:layout_heightPercent="0.27%w" />
+
+    </com.yikaobao.view.percentsuppor.PercentRelativeLayout>
+
+    <Button
+        android:id="@+id/Login_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/myborderbutton5"
+        android:gravity="center"
+        android:text="登  录"
+        android:textColor="@color/colorWhite"
+        app:layout_heightPercent="@string/app_dp_43"
+        app:layout_marginLeftPercent="@string/app_dp_14"
+        app:layout_marginRightPercent="@string/app_dp_14"
+        app:layout_marginTopPercent="@string/app_dp_24"
+        app:layout_textSizePercent="@string/app_dp_18" />
+
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="重置密码"
+        android:textColor="@color/colorWhite"
+        android:textSize="12dp"
+        app:layout_paddingPercent="@string/app_dp_11"
+        app:layout_textSizePercent="@string/app_dp_13" />
+
+
+</com.yikaobao.view.percentsuppor.PercentLinearLayout>
+
+
+
+
+

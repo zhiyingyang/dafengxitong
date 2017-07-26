@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yikaobao.view.percentsuppor.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_select_room_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        app:cardElevation="1dp"
+        app:cardMaxElevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:layout_heightPercent="@string/app_dp_60">
+
+        <com.yikaobao.view.percentsuppor.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="@color/colorWhite"
+            app:layout_heightPercent="@string/app_dp_60">
+
+            <TextView
+                android:id="@+id/item_score_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="姓名"
+                android:textColor="@color/colorBlack"
+                app:layout_textSizePercent="@string/app_dp_16"
+                app:layout_widthPercent="@string/app_dp_180" />
+
+            <TextView
+                android:id="@+id/item_score_ev"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/item_score_item"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="序号"
+                android:textColor="@color/colorBlack"
+                app:layout_marginPercent="@string/app_dp_15"
+                app:layout_textSizePercent="@string/app_dp_16"
+                app:layout_widthPercent="@string/app_dp_180" />
+
+        </com.yikaobao.view.percentsuppor.PercentLinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</com.yikaobao.view.percentsuppor.PercentLinearLayout>

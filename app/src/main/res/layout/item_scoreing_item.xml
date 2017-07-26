@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yikaobao.view.percentsuppor.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_select_room_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.yikaobao.view.percentsuppor.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <!--<View-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/colorGrayLight"-->
+        <!--app:layout_widthPercent="@string/app_dp_1" />-->
+        <TextView
+            android:id="@+id/item_score_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/item_score_dafeng"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:text="项目名称"
+            android:textColor="@color/colorBlack"
+            app:layout_paddingPercent="@string/app_dp_12"
+            app:layout_textSizePercent="@string/app_dp_14" />
+
+        <Button
+            android:id="@+id/item_score_dafeng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/buttonshape"
+            android:text="打分"
+            android:textColor="@color/colorWhite"
+            app:layout_heightPercent="@string/app_dp_30"
+            app:layout_marginRightPercent="@string/app_dp_12"
+            app:layout_textSizePercent="@string/app_dp_14"
+            app:layout_widthPercent="@string/app_dp_70" />
+
+    </com.yikaobao.view.percentsuppor.PercentRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGrayLight"
+        app:layout_heightPercent="@string/app_dp_1" />
+</com.yikaobao.view.percentsuppor.PercentLinearLayout>

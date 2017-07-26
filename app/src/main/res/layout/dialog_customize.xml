@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yikaobao.view.percentsuppor.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_select_room"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mybordergray10"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="标题"
+        android:textColor="@color/colorBlack"
+        app:layout_marginPercent="@string/app_dp_15"
+        app:layout_textSizePercent="@string/app_dp_20" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGray"
+        app:layout_heightPercent="@string/app_dp_1" />
+
+    <com.yikaobao.view.percentsuppor.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_paddingBottomPercent="@string/app_dp_30">
+
+        <com.yikaobao.view.percentsuppor.PercentLinearLayout
+            android:id="@+id/dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_paddingPercent="@string/app_dp_20"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+
+        </com.yikaobao.view.percentsuppor.PercentLinearLayout>
+
+        <TextView
+            android:id="@+id/dialog_bu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/myborderwrite10"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/btninvalid"
+            app:layout_heightPercent="@string/app_dp_45"
+            app:layout_marginLeftPercent="@string/app_dp_20"
+            app:layout_marginRightPercent="@string/app_dp_20"
+            app:layout_marginTopPercent="@string/app_dp_10"
+            app:layout_textSizePercent="@string/app_dp_18" />
+    </com.yikaobao.view.percentsuppor.PercentLinearLayout>
+</com.yikaobao.view.percentsuppor.PercentLinearLayout>

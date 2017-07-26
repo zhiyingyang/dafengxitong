@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yikaobao.view.percentsuppor.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_select_room_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.yikaobao.view.percentsuppor.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_marginLeftPercent="@string/app_dp_20"
+        app:layout_marginRightPercent="@string/app_dp_20"
+        app:layout_heightPercent="@string/app_dp_60">
+
+        <TextView
+            android:id="@+id/item_dialog_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="项目名称"
+            android:textColor="@color/colorBlack"
+            app:layout_textSizePercent="@string/app_dp_20" />
+
+        <RadioButton
+            android:id="@+id/item_dialog_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorBlackLight"
+            app:layout_heightPercent="@string/app_dp_1" />
+
+    </com.yikaobao.view.percentsuppor.PercentRelativeLayout>
+
+
+</com.yikaobao.view.percentsuppor.PercentLinearLayout>

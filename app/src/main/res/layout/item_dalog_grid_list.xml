@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yikaobao.view.percentsuppor.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_select_room_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/item_dialog_bu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonshape"
+        android:text="称"
+        android:textColor="@color/colorWhite"
+        android:layout_gravity="center"
+        android:layout_marginRight="3dp"
+        android:layout_marginLeft="3dp"
+        app:layout_textSizePercent="@string/app_dp_150" />
+
+
+</com.yikaobao.view.percentsuppor.PercentLinearLayout>

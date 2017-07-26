@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yikaobao.view.percentsuppor.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayLight"
+    tools:context="com.yikaobao.activity.KaoZhanListActivity">
+
+    <com.yikaobao.view.TitleView
+        android:id="@+id/case_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="考站列表" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/case_list_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/case_list_title" />
+
+</com.yikaobao.view.percentsuppor.PercentRelativeLayout>
