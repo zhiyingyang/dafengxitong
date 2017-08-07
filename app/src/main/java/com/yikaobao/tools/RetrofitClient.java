@@ -88,12 +88,7 @@ public class RetrofitClient {
             //个新的response给应用层处理
             ResponseBody responseBody = response.peekBody(1024 * 1024);
             Log.i("RequestLog",
-                    String.format("接收响应",
-                            response.request().url(),
-                            responseBody.string(),
-                            (t2 - t1) / 1e6d
-                            //response.headers()
-                    ));
+                    responseBody.string());
 
             return response;
         }
@@ -139,6 +134,7 @@ public class RetrofitClient {
         //CertificateFactory用来证书生成
         CertificateFactory certificateFactory;
         try {
+
             certificateFactory = CertificateFactory.getInstance("X.509");
             //Create a KeyStore containing our trusted CAs
             KeyStore keyStore = KeyStore.getInstance(KeyStore.getDefaultType());
@@ -153,6 +149,7 @@ public class RetrofitClient {
                     is.close();
                 }
             }
+
             //Create a TrustManager that trusts the CAs in our keyStore
             TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
             trustManagerFactory.init(keyStore);

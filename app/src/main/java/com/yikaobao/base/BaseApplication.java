@@ -73,10 +73,6 @@ public class BaseApplication extends Application {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-//        //全局捕获异常
-//        CrashHandler crashHandler = CrashHandler.getInstance();
-//        crashHandler.init(getApplicationContext(), this);
-//
 //    }
 //
 //    /**

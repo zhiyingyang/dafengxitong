@@ -24,6 +24,7 @@ public class MyRecyclerview extends RecyclerView {
     }
 
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        return false;
+
+        return true;
     }
 }

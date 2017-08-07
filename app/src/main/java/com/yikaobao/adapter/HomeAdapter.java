@@ -10,11 +10,14 @@ import android.widget.TextView;
 
 import com.yikaobao.R;
 import com.yikaobao.activity.KaoZhanListActivity;
+import com.yikaobao.activity.QuestionnaireActivity;
 import com.yikaobao.base.BaseApplication;
 import com.yikaobao.data.DataHomeTest;
 import com.yikaobao.view.percentsuppor.PercentRelativeLayout;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 import butterknife.Bind;
@@ -99,8 +102,16 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
     @Override
     public void onClick(final View v) {
         final int position = (int) v.getTag();
-        Intent intent = new Intent(mContext, KaoZhanListActivity.class);
         BaseApplication.caseId = mDatas.get(position).getId();
+
+        Intent intent;
+        if (BaseApplication.user.getData().getRoleId() == 3) {
+            intent = new Intent(mContext, QuestionnaireActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            mContext.startActivity(intent);
+            return;
+        }
+        intent = new Intent(mContext, KaoZhanListActivity.class);
         intent.putExtra("title", mDatas.get(position).getName());
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mContext.startActivity(intent);

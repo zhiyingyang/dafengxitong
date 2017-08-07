@@ -21,6 +21,7 @@ package com.yikaobao.tools;
 import com.yikaobao.base.BaseData;
 import com.yikaobao.data.DataCaseList;
 import com.yikaobao.data.DataHomeTest;
+import com.yikaobao.data.DataQuestionId;
 import com.yikaobao.data.DataScoreing;
 import com.yikaobao.data.DataStudentsList;
 import com.yikaobao.data.DataUser;
@@ -67,10 +68,10 @@ public interface GitHubApi {
 //    Call<BaseData> postBaseData(@Body RequestBody route);//传入的参数为RequestBody
 //
 //
-//    @Headers({"Content-Type: application/json", "Accept: application/json", "Charset:utf-8"})
-//    @POST("Mobile")
-//    Call<DataSelectDate> postSelectDate(@Body RequestBody route);//传入的参数为RequestBody
-//
+    @Headers({"Content-Type: application/json", "Accept: application/json", "Charset:utf-8"})
+    @POST("public/")
+    Call<DataQuestionId> postQuestionnaire(@Body RequestBody route);//传入的参数为RequestBody
+
 //
 //    @Headers({"Content-Type: application/json", "Accept: application/json", "Charset:utf-8"})
 //    @POST("Mobile")

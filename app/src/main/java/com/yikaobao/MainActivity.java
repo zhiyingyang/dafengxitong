@@ -7,6 +7,7 @@ import android.os.Message;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -119,7 +120,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void getData() {
         if (BaseApplication.user == null) return;
         RequestParams requestParams = new RequestParams();
-        requestParams.put("Pack", "Kaoan");
+        if (BaseApplication.user.getData().getRoleId()==3){
+            requestParams.put("Pack", "Questionnaire");
+
+        }else{
+            requestParams.put("Pack", "Kaoan");
+        }
+
         requestParams.put("Interface", "caseList");
 
         Retrofit retrofit = RetrofitClient.builderRetrofit();
@@ -132,7 +139,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             public void onResponse(Call<DataHomeTest> call,
                                    Response<DataHomeTest> response) {
                 DataHomeTest dataHomeTest = response.body();
-
+                Log.i("RequestLog",
+                        String.format("huiidao==========="
+                                //response.headers()
+                        ));
                 switch (dataHomeTest.getFlag()) {
                     case "Success":
                         if (page == 0) {

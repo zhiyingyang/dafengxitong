@@ -70,6 +70,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         // RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), "{\"Pack\":\"Login\",\"Interface\":\"login\",\"Username\":15535730437,\"Password\":\"123456\"} ");
 
         Call<DataUser> call = repo.postLogin(body);
+
         call.enqueue(new Callback<DataUser>() {
             @Override
             public void onResponse(Call<DataUser> call,

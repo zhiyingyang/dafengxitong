@@ -65,7 +65,6 @@ public class TitleView extends LinearLayout implements View.OnClickListener {
         rightImg = findViewById(R.id.view_title_right_view);
         rightTv = (TextView) findViewById(R.id.view_title_right_tv);
 
-
         LinearLayout linearLayout = (LinearLayout) v.findViewById(R.id.view_title_right_LinearLayout);
         linearLayout.setOnClickListener(this);
         back.setOnClickListener(this);

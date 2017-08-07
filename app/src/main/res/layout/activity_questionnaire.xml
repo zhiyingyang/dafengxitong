@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.yikaobao.view.percentsuppor.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.yikaobao.activity.QuestionnaireActivity">
+    android:background="@color/colorGrayLight"
+    android:fitsSystemWindows="true"
+    android:minHeight="?attr/actionBarSize"
+    android:orientation="vertical">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/qa_rv"
+    <com.yikaobao.view.TitleView
+        android:id="@+id/home_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="调查问卷" />
+
+    <ScrollView
+        android:layout_below="@+id/home_title"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </android.support.v7.widget.RecyclerView>
 
+        <com.yikaobao.view.percentsuppor.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:fitsSystemWindows="true"
+            android:minHeight="?attr/actionBarSize"
+            android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/qa_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/buttonFab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/qa_rv"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/buttonshape"
+                android:text="提交"
+                android:textColor="@color/colorWhite"
+                app:layout_heightPercent="@string/app_dp_43"
+                app:layout_marginPercent="@string/app_dp_12"
+                app:layout_textSizePercent="@string/app_dp_18" />
+        </com.yikaobao.view.percentsuppor.PercentRelativeLayout>
+
+    </ScrollView>
+
+</com.yikaobao.view.percentsuppor.PercentRelativeLayout>
