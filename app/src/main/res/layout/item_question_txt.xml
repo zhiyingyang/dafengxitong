@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yikaobao.view.percentsuppor.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_select_room_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.yikaobao.view.percentsuppor.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_paddingPercent="@string/app_dp_12"
+        app:layout_widthPercent="@string/app_dp_360">
+
+        <com.yikaobao.view.percentsuppor.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_qusetion_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="类型"
+                app:layout_paddingPercent="@string/app_dp_4"
+                android:background="@drawable/buttonshape"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/item_qusetion_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:text="单选题目"
+                android:textColor="@color/colorBlack" />
+
+        </com.yikaobao.view.percentsuppor.PercentLinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/item_qusetion_et"
+            app:layout_marginLeftPercent="@string/app_dp_5"
+            android:layout_height="wrap_content"
+            android:background="@drawable/myborderbutton5back"
+            app:layout_marginTopPercent="@string/app_dp_12"
+            app:layout_paddingPercent="@string/app_dp_4"
+            android:textColor="@color/colorBlack"
+            />
+    </com.yikaobao.view.percentsuppor.PercentLinearLayout>
+
+</com.yikaobao.view.percentsuppor.PercentLinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yikaobao.view.percentsuppor.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_select_room_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <com.yikaobao.view.percentsuppor.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_paddingPercent="@string/app_dp_12"
+        app:layout_widthPercent="@string/app_dp_360">
+
+        <com.yikaobao.view.percentsuppor.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_qusetion_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="类型"
+                app:layout_paddingPercent="@string/app_dp_4"
+                android:background="@drawable/buttonshape"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/item_qusetion_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:text="单选题目"
+                android:textColor="@color/colorBlack" />
+
+        </com.yikaobao.view.percentsuppor.PercentLinearLayout>
+
+        <com.yikaobao.view.MyRadioGroup
+            android:id="@+id/qusetion_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_marginTopPercent="@string/app_dp_8"
+            app:layout_paddingLeftPercent="@string/app_dp_5">
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试题目"
+                android:textColor="@color/colorBlack"
+                app:layout_textSizePercent="@string/app_dp_16" />
+
+        </com.yikaobao.view.MyRadioGroup>
+
+    </com.yikaobao.view.percentsuppor.PercentLinearLayout>
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/colorGray"-->
+    <!--app:layout_heightPercent="@string/app_dp_1" />-->
+
+
+</com.yikaobao.view.percentsuppor.PercentLinearLayout>

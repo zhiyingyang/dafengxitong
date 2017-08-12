@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yikaobao.view.percentsuppor.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_select_room_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.yikaobao.view.percentsuppor.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_paddingPercent="@string/app_dp_12"
+        app:layout_widthPercent="@string/app_dp_360">
+
+        <com.yikaobao.view.percentsuppor.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_qusetion_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonshape"
+                android:gravity="center_vertical"
+                android:text="类型"
+                android:textColor="@color/colorWhite"
+                app:layout_paddingPercent="@string/app_dp_4" />
+
+            <TextView
+                android:id="@+id/item_qusetion_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="单选题目"
+                android:textColor="@color/colorBlack" />
+
+        </com.yikaobao.view.percentsuppor.PercentLinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/item_qusetion_px_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_marginTopPercent="@string/app_dp_12"
+            app:layout_paddingLeftPercent="@string/app_dp_5" />
+
+    </com.yikaobao.view.percentsuppor.PercentLinearLayout>
+
+
+</com.yikaobao.view.percentsuppor.PercentLinearLayout>
