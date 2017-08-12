@@ -2,8 +2,8 @@ package com.yikaobao.tools;
 
 //通知类
 public class FavorEvent<T> {
-    //选择考场
-    public final static int Select_Room = 01;
+    //
+    public final static int  ViewPagerNext= 01;
     //修改评分项目
     public final static int Case_Detail = 02;
     //添加评分项目

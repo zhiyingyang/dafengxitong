@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
     android:orientation="horizontal">
 
     <TextView
@@ -11,11 +13,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_margin="12dp"
         android:gravity="center"
         android:text="病人没兴趣"
         android:textColor="@color/colorBlack"
-        app:layout_heightPercent="@string/app_dp_35"
         app:layout_widthPercent="@string/app_dp_100"
         app:layout_textSizePercent="@string/app_dp_18" />
 
@@ -30,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
+        android:layout_marginRight="8dp"
         android:orientation="horizontal" />
 
 </com.yikaobao.view.percentsuppor.PercentLinearLayout>

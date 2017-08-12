@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.yikaobao.R;
 import com.yikaobao.activity.KaoZhanListActivity;
 import com.yikaobao.activity.QuestionnaireActivity;
+import com.yikaobao.activity.QuestionnaireViewPagerActivity;
 import com.yikaobao.base.BaseApplication;
 import com.yikaobao.data.DataHomeTest;
 import com.yikaobao.view.percentsuppor.PercentRelativeLayout;
@@ -55,6 +56,15 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
     public void upData(List<DataHomeTest.DataBean> datas) {
         mDatas.clear();
         mDatas.addAll(datas);
+        notifyDataSetChanged();
+    }
+
+
+    /**
+     * 删除数据
+     */
+    public void clearData() {
+        mDatas.clear();
         notifyDataSetChanged();
     }
 
@@ -106,7 +116,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
 
         Intent intent;
         if (BaseApplication.user.getData().getRoleId() == 3) {
-            intent = new Intent(mContext, QuestionnaireActivity.class);
+            intent = new Intent(mContext, QuestionnaireViewPagerActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             mContext.startActivity(intent);
             return;

@@ -135,6 +135,7 @@ public class CandidatesListActivity extends BaseActivity {
                                    Response<DataStudentsList> response) {
 
                 DataStudentsList dataHomeTest = response.body();
+                if(dataHomeTest==null)return;
 
                 switch (dataHomeTest.getFlag()) {
 

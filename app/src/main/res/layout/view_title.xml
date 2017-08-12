@@ -54,10 +54,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerInParent="true"
+                android:text="1/20"
+                android:textColor="@color/colorWhite"
                 android:visibility="gone"
-                app:layout_heightPercent="50.7%"
-                app:layout_textSizePercent="5.2%w"
-                app:layout_widthPercent="50.7%h" />
+                app:layout_textSizePercent="35%h" />
 
             <View
                 android:id="@+id/view_title_right_view"

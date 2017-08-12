@@ -47,14 +47,13 @@
         android:id="@+id/candidateslist_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorGrayLight"
         android:layout_above="@+id/scoreing_bu"
         android:layout_below="@+id/exam_title" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorGrayLight"
+        android:background="@color/colorGray"
         app:layout_heightPercent="@string/app_dp_1" />
 
     <Button

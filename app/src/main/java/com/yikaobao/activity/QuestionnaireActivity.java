@@ -17,11 +17,14 @@ import com.yikaobao.data.AnswerBean;
 import com.yikaobao.data.DataQuestionId;
 import com.yikaobao.data.RequestParams;
 import com.yikaobao.data.SubAnswerBean;
+import com.yikaobao.tools.FavorEvent;
 import com.yikaobao.tools.GitHubApi;
 import com.yikaobao.tools.RetrofitClient;
 import com.yikaobao.tools.Tools;
 import com.yikaobao.view.MyArrayList;
 import com.yikaobao.view.RecycleViewDivider;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -200,6 +203,11 @@ public class QuestionnaireActivity extends AppCompatActivity implements View.OnC
                     case "Success":
                         Tools.myMakeText(getApplicationContext(), "提交成功");
                         QuestionnaireActivity.this.finish();
+
+                        FavorEvent anyEventType = new FavorEvent();
+                        anyEventType.setId(FavorEvent.RefreshMainActivity);
+                        EventBus.getDefault().postSticky(anyEventType);
+
                         break;
                     case "Error":
                         Tools.myMakeText(getApplicationContext(), baseData.getMsg());

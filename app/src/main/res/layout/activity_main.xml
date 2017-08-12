@@ -20,90 +20,82 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/home_title"
+
         android:orientation="vertical">
 
-        <com.cjj.MaterialRefreshLayout
-            android:id="@+id/home_refresh"
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/refreshLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/home_title"
-            app:isLoadMore="false"
-            app:overlay="true"
-            app:progress_colors="@array/material_colors"
-            app:progress_show_arrow="true"
-            app:progress_show_circle_backgroud="true"
-            app:wave_height_type="normal"
-            app:wave_show="false">
+            android:layout_above="@+id/buttonFab">
 
-            <com.yikaobao.view.percentsuppor.PercentRelativeLayout
+            <com.scwang.smartrefresh.header.MaterialHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlClassicsSpinnerStyle="FixedBehind" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/show_evaluation_eva"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/home_title"
-                android:orientation="vertical">
+                android:layout_above="@+id/buttonFab" />
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/show_evaluation_eva"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorGrayLight"
-                    android:layout_above="@+id/buttonFab" />
 
-                <Button
-                    android:id="@+id/buttonFab"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:background="@drawable/buttonshape"
-                    android:gravity="center"
-                    android:text="退出登录"
-                    android:textColor="@color/colorWhite"
-                    app:layout_heightPercent="@string/app_dp_43"
-                    app:layout_marginPercent="@string/app_dp_12"
-                    app:layout_textSizePercent="@string/app_dp_18" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
-            </com.yikaobao.view.percentsuppor.PercentRelativeLayout>
-            <!--<com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader-->
-            <!--android:id="@+id/home_header"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="center_horizontal|top">-->
+        <Button
+            android:id="@+id/buttonFab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/buttonshape"
+            android:gravity="center"
+            android:text="退出登录"
+            android:textColor="@color/colorWhite"
+            app:layout_heightPercent="@string/app_dp_43"
+            app:layout_marginPercent="@string/app_dp_12"
+            app:layout_textSizePercent="@string/app_dp_18" />
+        <!--<com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader-->
+        <!--android:id="@+id/home_header"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal|top">-->
 
-            <!--<com.jsmosce.view.percentsuppor.PercentLinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:background="@color/colorWhite"-->
-            <!--android:gravity="center_horizontal"-->
-            <!--android:orientation="vertical">-->
+        <!--<com.jsmosce.view.percentsuppor.PercentLinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/colorWhite"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:orientation="vertical">-->
 
-            <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="申请进程"-->
-            <!--android:textColor="@color/colorBlack"-->
-            <!--app:layout_marginTopPercent="@string/app_dp_14"-->
-            <!--app:layout_textSizePercent="@string/app_dp_16" />-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="申请进程"-->
+        <!--android:textColor="@color/colorBlack"-->
+        <!--app:layout_marginTopPercent="@string/app_dp_14"-->
+        <!--app:layout_textSizePercent="@string/app_dp_16" />-->
 
-            <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="若已通过直接点击考案进入下一步"-->
-            <!--app:layout_marginBottomPercent="@string/app_dp_14"-->
-            <!--app:layout_marginTopPercent="@string/app_dp_14"-->
-            <!--app:layout_textSizePercent="@string/app_dp_14" />-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="若已通过直接点击考案进入下一步"-->
+        <!--app:layout_marginBottomPercent="@string/app_dp_14"-->
+        <!--app:layout_marginTopPercent="@string/app_dp_14"-->
+        <!--app:layout_textSizePercent="@string/app_dp_14" />-->
 
-            <!--<View-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_alignParentBottom="true"-->
-            <!--android:background="@color/colorGray"-->
-            <!--app:layout_heightPercent="@string/app_dp_1" />-->
-            <!--</com.jsmosce.view.percentsuppor.PercentLinearLayout>-->
-            <!--</com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader>-->
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="@color/colorGray"-->
+        <!--app:layout_heightPercent="@string/app_dp_1" />-->
+        <!--</com.jsmosce.view.percentsuppor.PercentLinearLayout>-->
+        <!--</com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader>-->
 
-        </com.cjj.MaterialRefreshLayout>
+
         <!--
                 <android.support.design.widget.NavigationView
                     android:id="@+id/nav_view"

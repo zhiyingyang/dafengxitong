@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/mybordergray10"
     android:fitsSystemWindows="true"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
 
     <TextView
         android:id="@+id/dialog_title"
@@ -26,6 +27,7 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/dialog_scoreing_rv"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content">
 
     </android.support.v7.widget.RecyclerView>
@@ -35,15 +37,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/myborderwrite10"
-        android:text="确定"
-        app:layout_heightPercent="@string/app_dp_45"
-        android:visibility="gone"
         android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/btninvalid"
+        android:visibility="gone"
+        app:layout_heightPercent="@string/app_dp_45"
+        app:layout_marginBottomPercent="@string/app_dp_20"
         app:layout_marginLeftPercent="@string/app_dp_20"
         app:layout_marginRightPercent="@string/app_dp_20"
-        android:textColor="@color/btninvalid"
         app:layout_marginTopPercent="@string/app_dp_30"
-        app:layout_marginBottomPercent="@string/app_dp_20"
         app:layout_textSizePercent="@string/app_dp_18" />
 
 </com.yikaobao.view.percentsuppor.PercentLinearLayout>

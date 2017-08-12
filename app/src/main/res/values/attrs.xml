@@ -69,6 +69,12 @@
         <item name="colorAccent">@color/colorBule</item>
     </style>
 
+    <!--dialog样式-->
+    <style name="mYactivity" parent="@android:style/Theme.Dialog">
+        <item name="android:windowSoftInputMode">stateHidden|adjustResize</item>
+    </style>
+
+
 
     <declare-styleable name="CheckBox">
         <attr name="carbon_checkColor" format="reference|color" />

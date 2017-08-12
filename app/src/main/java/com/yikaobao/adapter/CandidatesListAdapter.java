@@ -146,7 +146,7 @@ public class CandidatesListAdapter extends RecyclerView.Adapter<CandidatesListAd
         @Bind(R.id.item_score_ev)
         TextView itemScoreEv;
         @Bind(R.id.card_view)
-        CardView cardView;
+        ViewGroup cardView;
 
         public MyViewHolder(View view) {
             super(view);

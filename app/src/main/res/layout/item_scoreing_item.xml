@@ -12,6 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorWhite"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
         android:orientation="horizontal">
 
         <!--<View-->
@@ -50,6 +52,6 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorGrayLight"
+        android:background="@color/colorGray"
         app:layout_heightPercent="@string/app_dp_1" />
 </com.yikaobao.view.percentsuppor.PercentLinearLayout>

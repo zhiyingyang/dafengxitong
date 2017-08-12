@@ -11,8 +11,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.cjj.MaterialRefreshLayout;
-import com.cjj.MaterialRefreshListener;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
+import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.yikaobao.activity.LoginActivity;
 import com.yikaobao.adapter.HomeAdapter;
 import com.yikaobao.base.BaseActivity;
@@ -26,6 +28,7 @@ import com.yikaobao.tools.SharedPMananger;
 import com.yikaobao.tools.Tools;
 import com.yikaobao.view.TitleView;
 
+import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 import butterknife.Bind;
@@ -46,9 +49,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     Button buttonFab;
     @Bind(R.id.show_evaluation_eva)
     RecyclerView showEvaluationEva;
-    @Bind(R.id.home_refresh)
-    MaterialRefreshLayout homeRefresh;
+    //  @Bind(R.id.home_refresh)
+    //MaterialRefreshLayout homeRefresh;
     HomeAdapter homeAdapter;
+    @Bind(R.id.refreshLayout)
+    SmartRefreshLayout refreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +71,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         // drawer.addDrawerListener(this);
         initView();
         getData();
+
+        EventBus.getDefault().register(this);
+
         //  homeRefresh.autoRefresh();
     }
 
@@ -88,25 +96,40 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         showEvaluationEva.setAdapter(homeAdapter);
         // recyclerViewHeader.attachTo(recyclerView);
 
-        homeRefresh.setMaterialRefreshListener(new MaterialRefreshListener() {
+//        homeRefresh.setMaterialRefreshListener(new MaterialRefreshListener() {
+//
+//            @Override
+//            public void onRefresh(final MaterialRefreshLayout materialRefreshLayout) {
+//                page = 0;
+//                getData();
+//            }
+//
+//            @Override
+//            public void onfinish() {
+//            }
+//
+//            @Override
+//            public void onRefreshLoadMore(final MaterialRefreshLayout materialRefreshLayout) {
+//                page++;
+//                getData();
+//            }
+//
+//        });
 
+        refreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
-            public void onRefresh(final MaterialRefreshLayout materialRefreshLayout) {
+            public void onRefresh(RefreshLayout refreshlayout) {
                 page = 0;
                 getData();
             }
-
-            @Override
-            public void onfinish() {
-            }
-
-            @Override
-            public void onRefreshLoadMore(final MaterialRefreshLayout materialRefreshLayout) {
-                page++;
-                getData();
-            }
-
         });
+//        refreshLayout.setOnLoadmoreListener(new OnLoadmoreListener() {
+//            @Override
+//            public void onLoadmore(RefreshLayout refreshlayout) {
+//                page++;
+//                getData();
+//            }
+//        });
 
 
         findViewById(R.id.buttonFab).setOnClickListener(this);
@@ -120,10 +143,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void getData() {
         if (BaseApplication.user == null) return;
         RequestParams requestParams = new RequestParams();
-        if (BaseApplication.user.getData().getRoleId()==3){
+        if (BaseApplication.user.getData().getRoleId() == 3) {
             requestParams.put("Pack", "Questionnaire");
 
-        }else{
+        } else {
             requestParams.put("Pack", "Kaoan");
         }
 
@@ -147,8 +170,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     case "Success":
                         if (page == 0) {
                             homeAdapter.upData(dataHomeTest.getData());
+
                         } else {
+
                             homeAdapter.addData(dataHomeTest.getData());
+
                         }
 
                         break;
@@ -167,28 +193,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                         break;
 
                 }
-
-                new Handler() {
-                    @Override
-                    public void handleMessage(Message msg) {
-                        homeRefresh.finishRefresh();
-                        homeRefresh.finishRefreshLoadMore();
-                    }
-                }.sendEmptyMessageDelayed(0, 500);
-
+                refreshLayout.finishRefresh(500);
 
             }
 
             @Override
             public void onFailure(Call<DataHomeTest> call, Throwable t) {
                 Tools.myMakeText(getApplicationContext(), t.getMessage());
-                new Handler() {
-                    @Override
-                    public void handleMessage(Message msg) {
-                        homeRefresh.finishRefresh();
-                        homeRefresh.finishRefreshLoadMore();
-                    }
-                }.sendEmptyMessageDelayed(0, 500);
+                refreshLayout.finishRefresh(500);
+                refreshLayout.finishLoadmore(500);
             }
         });
 
@@ -272,13 +285,16 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     @Subscribe
     public void onEvent(FavorEvent event) {
-        //选择关联
+        //选择关联 13601884014
         if (event.getId() == FavorEvent.Exit_App) {
             this.finish();
         }
         if (event.getId() == FavorEvent.RefreshMainActivity) {
-            homeRefresh.autoRefresh();
+            homeAdapter.clearData();
+            refreshLayout.autoRefresh();
+
         }
     }
+
 
 }

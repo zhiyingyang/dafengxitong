@@ -35,6 +35,9 @@ public class BaseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+
+
         myApplication = this;
         // flag = new int[]{0, 0, 0};
         //全局捕获异常
